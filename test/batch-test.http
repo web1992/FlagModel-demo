@@ -1,5 +1,5 @@
 ### Send request with dynamic variables in request's body
-POST http://127.0.0.1:5000/embeddingBtch
+POST http://127.0.0.1:5000/embeddingsBtch
 Content-Type: application/json
 
 {
@@ -12,4 +12,4 @@ Content-Type: application/json
 
 
 ### Send request with dynamic variables in request's body
-GET http://127.0.0.1:5000/embedding?doc=你好
+GET http://127.0.0.1:5000/embeddings?doc=你好

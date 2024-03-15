@@ -15,13 +15,13 @@ class App:
         def hello():
             return 'server started !'
 
-        @self.app.route('/embedding')
+        @self.app.route('/embeddings')
         def embedding():
             doc = request.args.get('doc', '')
             print('doc=', doc)
             return self.do_emb([doc])
 
-        @self.app.route('/embeddingBtch', methods=['POST'])
+        @self.app.route('/embeddingsBtch', methods=['POST'])
         def submit_form():
             if request.method == 'POST':
                 # 获取 POST 请求中的原始数据
