@@ -38,14 +38,19 @@ class App:
     def do_emb(self, docs):
         if len(docs) == 0:
             embeddings_json = {
-                'embeddingsList': []
+                'embeddingsList': [],
+                'embeddingsSize': 0,
+                'vectorsSize': 0
             }
             # 返回JSON格式的embeddings_1
             return jsonify(embeddings_json)
         else:
-            embeddings_rs = self.embedding.get_embedding_array(docs)
+            embeddings_docs = self.embedding.get_embedding_array(docs)
+            embeddings_docs_list = embeddings_docs.tolist()
             embeddings_json = {
-                'embeddingsList': embeddings_rs.tolist()
+                'embeddingsList': embeddings_docs_list,
+                'embeddingsSize': len(embeddings_docs_list),
+                'vectorsSize': len(embeddings_docs_list[0])
             }
             # 返回JSON格式的embeddings_1
             return jsonify(embeddings_json)
