@@ -1,0 +1,8 @@
+### Send request with dynamic variables in request's body
+POST http://127.0.0.1:5000/embeddingBtch
+Content-Type: application/json
+
+{
+  "ext":"",
+  "docs":["aaa","CCC"]
+}
