@@ -43,7 +43,7 @@ class App:
             # 返回JSON格式的embeddings_1
             return jsonify(embeddings_json)
         else:
-            embeddings_rs = self.embedding.getEmbeddingArray(docs)
+            embeddings_rs = self.embedding.get_embedding_array(docs)
             embeddings_json = {
                 'embeddingsList': embeddings_rs.tolist()
             }
