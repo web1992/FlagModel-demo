@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 
-from EmbeddingMode import ZGEmbedding
+from embeddings import ZGEmbedding
 
 
 class App:
