@@ -1,5 +1,6 @@
 from FlagEmbedding import FlagModel
 import sys
+from typing import List
 
 
 class ZGEmbedding:
@@ -17,6 +18,7 @@ class ZGEmbedding:
         model = FlagModel(embedding_path,
                           query_instruction_for_retrieval=self.query_instruction,
                           use_fp16=True)
+        print('model info', model)
         return model
 
     def get_embedding_array(self, arr: list):

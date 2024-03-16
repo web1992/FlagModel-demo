@@ -22,7 +22,7 @@ class App:
             return self.do_emb([doc])
 
         @self.app.route('/embeddingsBatch', methods=['POST'])
-        def submit_form():
+        def embeddings_batch():
             if request.method == 'POST':
                 # 获取 POST 请求中的原始数据
                 body_content = request.get_data()
