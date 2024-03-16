@@ -21,7 +21,7 @@ class App:
             print('doc=', doc)
             return self.do_emb([doc])
 
-        @self.app.route('/embeddingsBtch', methods=['POST'])
+        @self.app.route('/embeddingsBatch', methods=['POST'])
         def submit_form():
             if request.method == 'POST':
                 # 获取 POST 请求中的原始数据

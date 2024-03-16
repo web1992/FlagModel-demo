@@ -1,5 +1,5 @@
 ### Send request with dynamic variables in request's body
-POST http://127.0.0.1:5000/embeddingsBtch
+POST http://127.0.0.1:5000/embeddingsBatch
 Content-Type: application/json
 
 {
