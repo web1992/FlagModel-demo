@@ -69,4 +69,3 @@ class DocBody:
     def __init__(self, ext, docs: list):
         self.ext = []
         self.docs = docs
-
