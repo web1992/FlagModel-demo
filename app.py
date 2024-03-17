@@ -52,7 +52,7 @@ class App:
                 'embeddingsSize': len(embeddings_docs_list),
                 'vectorsSize': len(embeddings_docs_list[0])
             }
-            # 返回JSON格式的embeddings_1
+            # 返回JSON格式的embeddings
             return jsonify(embeddings_json)
 
     def run(self):
