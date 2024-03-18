@@ -1,4 +1,4 @@
-from StoreClient import StoreClient
+from store_client import StoreClient
 from embeddings import ZGEmbedding
 
 # store_client = StoreClient("Test4")

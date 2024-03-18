@@ -1,4 +1,4 @@
-from StoreClient import StoreClient
+from store_client import StoreClient
 import numpy as np
 
 store_client = StoreClient("Test2")
