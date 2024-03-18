@@ -5,6 +5,7 @@ from qdrant_client.http import models
 from qdrant_client.http.models import CollectionStatus
 
 # https://colab.research.google.com/github/qdrant/examples/blob/master/qdrant_101_getting_started/getting_started.ipynb
+# http://124.223.35.219:6333
 
 client = QdrantClient(host="124.223.35.219", port=6333)
 print(client)

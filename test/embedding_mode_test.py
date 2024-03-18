@@ -1,4 +1,3 @@
-# 创建 Person 类的实例
 from embeddings import ZGEmbedding
 
 data_list = ["样例数据-3", "样例数据-4"]

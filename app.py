@@ -15,6 +15,18 @@ class App:
         def hello():
             return 'server started !'
 
+        @self.app.route('/search')
+        def search():
+            doc = request.args.get('doc', '')
+            print('doc=', doc)
+            return self.do_emb([doc])
+
+        @self.app.route('/store')
+        def search():
+            doc = request.args.get('doc', '')
+            print('doc=', doc)
+            return self.do_emb([doc])
+
         @self.app.route('/embeddings')
         def embedding():
             doc = request.args.get('doc', '')
