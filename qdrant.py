@@ -9,19 +9,23 @@ class QdrantStore(Store):
         self.client = init()
         self.collection_name = collection_name
 
-    def upsert(self, index: list, data_list: list):
+    def upsert(self, index: list,
+               vector_size: int,
+               data_list: list,
+               payload: []):
         collections = self.client.get_collections()
-        print('len collections',len(list(collections)))
+        print('len collections', len(list(collections)))
         if self.collection_name not in collections:
             self.client.recreate_collection(
                 collection_name=self.collection_name,
-                vectors_config=models.VectorParams(size=100, distance=models.Distance.COSINE)
+                vectors_config=models.VectorParams(size=vector_size, distance=models.Distance.COSINE)
             )
         upsert_rs = self.client.upsert(
             collection_name=self.collection_name,
             points=models.Batch(
                 ids=index,
-                vectors=data_list
+                vectors=data_list,
+                payloads=payload
             )
         )
         print('upsert_rs', upsert_rs)
@@ -37,7 +41,9 @@ class QdrantStore(Store):
         search_rs = self.client.search(
             collection_name=self.collection_name,
             query_vector=query_data,
-            limit=limit
+            limit=limit,
+            with_vectors=False,
+            score_threshold=0.5
         )
         return search_rs
 
