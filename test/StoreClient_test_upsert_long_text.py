@@ -1,5 +1,4 @@
 from store_client import StoreClient
-import numpy as np
 from embeddings import ZGEmbedding
 
 store_client = StoreClient("Test-Long-text")

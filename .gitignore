@@ -10,6 +10,7 @@ classes/
 */.settings/
 */.idea/
 .venv
+md/
 
 # Compiled source #
 ###################
