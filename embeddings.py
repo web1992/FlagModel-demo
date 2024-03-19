@@ -1,6 +1,6 @@
-from FlagEmbedding import FlagModel
 import sys
-from typing import List
+
+from FlagEmbedding import FlagModel
 
 
 class ZGEmbedding:
